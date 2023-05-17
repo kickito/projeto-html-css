@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+:root {
+    --cor1:#79F2E6;
+    --cor2:#F25C05;
+    --cor3:#260F01;
+    --cor4:#A62F03;
+    --cor5:#591902;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    height: 50px;/* Essa propriedade altera a altura  */
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: row;/* Define a direção se é em linha ou coluna */
+    padding: 0 15px 0 15px;
+
+}
+
+#Logo {
+    width: 150px;
+    height: 100%;
+    color: white;/* Define a cor da fonte dos textos */
+    font-size: 30px;/* Define o tamanho da fonte */
+    text-transform: uppercase;/* Coloca em letras maiusculas */
+    display: flex;/* Torna os itens internos em flexiveis */
+    align-items: center;/* Alinha os itens no centro */
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #232526;
+    color: white;
+    height: 100%;
+    width: 105px;
+    display: flex;
+    align-items: center;/* Centraliza na vertical */
+    justify-content: center;/* Centraliza na horizontal */
+    padding: 0 10px 0 10px;
+}
+
+a:hover {
+    background-color: var(--cor4);
+}
