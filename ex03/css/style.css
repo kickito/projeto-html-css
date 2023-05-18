@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: boxigen;
+    src: url(../fonts/BOXIGEN.ttf);
+}
+
 :root {
     --cor1:#79F2E6;
     --cor2:#F25C05;
@@ -15,22 +20,28 @@
 }
 
 header {
-    height: 50px;/* Essa propriedade altera a altura  */
     background-color: var(--cor2);
     display: flex;
     flex-direction: row;/* Define a direção se é em linha ou coluna */
-    padding: 0 15px 0 15px;
+}
 
+#header {
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
 }
 
 #Logo {
-    width: 150px;
-    height: 100%;
+    width: 300px;
     color: white;/* Define a cor da fonte dos textos */
     font-size: 30px;/* Define o tamanho da fonte */
     text-transform: uppercase;/* Coloca em letras maiusculas */
     display: flex;/* Torna os itens internos em flexiveis */
     align-items: center;/* Alinha os itens no centro */
+}
+
+#Logo img {
+    height: 50px;
 }
 
 nav {
@@ -43,7 +54,7 @@ a {
     text-transform: uppercase;
     background-color: #232526;
     color: white;
-    height: 100%;
+    height: 50px;
     width: 105px;
     display: flex;
     align-items: center;/* Centraliza na vertical */
@@ -53,4 +64,48 @@ a {
 
 a:hover {
     background-color: var(--cor4);
+}
+
+figure {
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    background-image: url("../imagens/pexels-dmitry-zvolskiy-1570806.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-figure-small{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* font-family: boxigen; */
+}
+#text-figure-1 {
+    border-bottom: 2px solid white;
+    padding: 0 25px 10px 25px;
+    
+}
+#text-figure-2 {
+    color: white;
+    font-size: 72px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: boxigen;
+    margin: 10px 0 10px 0;
+}
+#text-figure-3 {
+    border-top: 2px solid white;
+    padding: 10px 25px 0 25px;
+}
+
+@media (max-width: 775px) {
+    nav {
+        display: none;
+    }
 }
