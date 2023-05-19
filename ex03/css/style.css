@@ -20,15 +20,21 @@
 }
 
 header {
+    height: 50px;
     background-color: var(--cor2);
     display: flex;
     flex-direction: row;/* Define a direção se é em linha ou coluna */
+    position: relative;
 }
 
 #header {
     display: flex;
+    width: 80%;
+    width: 1500px;
     max-width: 1500px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 #Logo {
@@ -42,6 +48,20 @@ header {
 
 #Logo img {
     height: 50px;
+}
+
+#logo p {
+    margin-left: 10px;
+}
+
+#botao-menu {
+    display: none;
+}
+
+label[for='botao-menu'] {
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 nav {
@@ -98,14 +118,57 @@ figure {
     font-weight: bold;
     font-family: boxigen;
     margin: 10px 0 10px 0;
+    text-align: center;
 }
 #text-figure-3 {
     border-top: 2px solid white;
     padding: 10px 25px 0 25px;
+    text-align: center;
 }
 
-@media (max-width: 775px) {
+main {
+    position: relative;
+    width: 80%;
+    max-width: 1500px;
+    height: 500px;
+    margin: 0 auto 50px auto;
+    border: 1px solid black;
+    /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); */
+}
+
+main > div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: var(--cor2);
+    height: 350px;
+}
+
+@media (max-width: 930px) {
     nav {
-        display: none;
+        /* display: none; */
+        flex-direction: column;
+        position: absolute;
+        width: 90%;
+        top: 100%;
+        margin-top: -200%;
+        transition: all .4s;
     }
+
+    a {
+        width: 100%;
+        background-color:#232526;
+    }
+
+    label[for='botao-menu'] {
+        display: block;
+    }
+
+    #botao-menu:checked ~ nav {
+        margin-top: 0;
+    }
+
 }
