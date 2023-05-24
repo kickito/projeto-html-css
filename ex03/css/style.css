@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    height: 50px;
+    /* height: 50px; */
     background-color: var(--cor2);
     display: flex;
     flex-direction: row;/* Define a direção se é em linha ou coluna */
@@ -77,7 +77,7 @@ nav {
     display: flex;
 }
 
-a {
+nav a {
     text-decoration: none;
     text-transform: uppercase;
     background-color: #232526;
@@ -152,16 +152,26 @@ main {
     width: 95%;
     max-width: 95%;
     margin: 30px auto 40px auto;
-    height: auto;
-    /* border: 1px solid black; */
+    /* height: auto; */
     border-top: 3px solid var(--cor2);
 }
 
 .main-section h1{
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin: 20px auto 40px auto;
     text-align: center;
+    font-size: 32px;
 }
+
+#section-sobre{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#section-sobre h1{
+    width: 100%;
+}
+
 #section-sobre p {
     text-align: center;
 }
@@ -181,14 +191,14 @@ main {
     text-align: center;
     margin-bottom: 40px;
 }
-#serviços img{
+#serviços img {
     width: 60px;
     background-color: #d67d5d;
     padding: 5px;
     border-radius: 50%;
 }
 
-#serviços div:hover img{
+#serviços div:hover img {
     background-color:var(--cor2)
 }
 #serviços div:hover figcaption{
@@ -201,24 +211,140 @@ main {
     flex-wrap: wrap;
 }
 
-#profissionais > div{
+#profissionais > div {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-#profissionais img{
+#profissionais > div:hover img{
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+#profissionais img {
     width: 150px;
     margin-top: 20px;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.inf-profissionais {
+    background-color: var(--cor1);
+    padding: 10px 0 10px 0;
+    width: 200px; 
+}
+/*###################*/
+
+#contato {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#contato > p {
+    width: 49%;
+    min-width: 300px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#contato > div {
+    width: 49%;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+}
+
+#form-nome {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-email {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-msg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#form-btn input {
+    width: 80px;
+}
+
+#form-btn input:hover{
+    background-color: var(--cor4);
+}
+
+#contato input {
+    border-radius: 5px;
+    height: 30px;
+}
+
+#contato label, input, textarea {
+    margin-bottom: 10px;
 }
 
 footer {
     background-color: var(--cor2);
-    height: 300px;
+    /* height: 300px; */
+    /* color: black; */
 }
 
+#footer {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+#footer > div {
+    width: 49%;
+    min-width: 300px;
+}
+
+#footer h2 {
+    text-align: center;
+    margin: 20px auto 40px auto;
+}
+
+#footer-end, #footer-redes {
+    width: 49%;
+}
+
+#footer-redes > div {
+    display: flex;
+    justify-content: space-around;
+    min-height: 300px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#footer-redes a {
+    text-align: center;
+}
+
+#footer-redes img {
+    width: 150px;
+    height: 150px;
+}
 
 @media (max-width: 930px) {
     nav {
@@ -233,8 +359,8 @@ footer {
     }
 
     a {
-        width: 100%;
-        background-color:#232526;
+        width: 100%; 
+        background-color:var(--cor2);
         padding: 0;
     }
 
